@@ -5,14 +5,20 @@
 ** Login   <julien.chassard@epitech.eu>
 ** 
 ** Started on  Mon Nov 20 19:25:36 2017 Julien Chassard
-** Last update Tue Nov 21 08:21:33 2017 Julien Chassard
+** Last update Tue Nov 21 08:45:51 2017 Julien Chassard
 */
 
 #include "ID3.h"
 
-int main(UNUSED int argc, char **argv) {
+int main(int argc, char **argv) {
   t_id3v1	metadatas;
 
+  if (argc == 1 || argc > 2)
+    {
+      printf("[%s-%s] Invalid number of arguments\n", COLOR_RED, COLOR_RESET);
+      printf("USAGE:\n\t%s\t<music_filename>\n", argv[0]);
+      return (FAILURE);
+    }
   if (parse(argv[1], &metadatas) == FAILURE)
     return (FAILURE);
 
