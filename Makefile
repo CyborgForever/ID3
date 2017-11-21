@@ -5,7 +5,7 @@
 ## Login   <julien.chassard@epitech.eu>
 ## 
 ## Started on  Mon Nov 20 19:23:37 2017 Julien Chassard
-## Last update Tue Nov 21 07:16:04 2017 Julien Chassard
+## Last update Tue Nov 21 08:15:30 2017 Julien Chassard
 ##
 
 CC	=	gcc
@@ -22,7 +22,8 @@ RM	=	rm -f
 
 SRC	=	src/main.c		\
 		src/parse.c		\
-		src/print_infos.c
+		src/print_infos.c	\
+		src/is_valid.c
 
 OBJ	=	$(SRC:.c=.o)
 
