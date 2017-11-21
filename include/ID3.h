@@ -5,7 +5,7 @@
 ** Login   <julien.chassard@epitech.eu>
 ** 
 ** Started on  Mon Nov 20 19:26:26 2017 Julien Chassard
-** Last update Tue Nov 21 07:30:48 2017 Julien Chassard
+** Last update Tue Nov 21 08:10:29 2017 Julien Chassard
 */
 
 #ifndef ID3_H_
@@ -14,7 +14,7 @@
 # define SUCCESS	0
 # define FAILURE	1
 # define UNUSED		__attribute__ ((unused))
-
+# define PACKED		__attribute__ ((packed))
 # include <stdio.h>
 # include <stdlib.h>
 # include <sys/types.h>
@@ -23,7 +23,7 @@
 # include <unistd.h>
 # include <string.h>
 
-typedef struct	s_id3v1	{
+typedef struct PACKED	s_id3v1	{
   char	magic[3];
   char	title[30];
   char	author[30];
